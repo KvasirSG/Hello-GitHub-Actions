@@ -31,4 +31,11 @@ class WelcomeControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(view().name("welcome"));
     }
+
+    @Test
+    void user() throws Exception {
+        mockMvc.perform(get("/user"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("user"));
+    }
 }
